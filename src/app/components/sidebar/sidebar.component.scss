@@ -1,0 +1,113 @@
+.sidebar {
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  width: 232px;
+  background: rgb(77, 92, 228) !important;
+  padding-bottom: 70px;
+  border-right: 1px solid #cbcee8 !important;
+  box-shadow: 0 8px 16px 0 rgb(113 126 195 / 25%);
+  transition: 300ms;
+  overflow-y: auto;
+  z-index: 2;
+
+  .menu {
+    padding-top: 5%;
+    padding-bottom: 1vh;
+
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  .side-menu-list {
+    padding-top: 10%;
+
+    h4 {
+      color: white;
+      font-size: small;
+      margin-left: 10px;
+    }
+
+    .list-group {
+      max-height: 100vh;
+
+      .list-group-item {
+        border: none;
+        padding-bottom: 0 !important;
+        background: none;
+
+        a {
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          color: white;
+          border-bottom: 0;
+          border-radius: 30px;
+          padding-left: 20px !important;
+          cursor: pointer;
+
+          .father-lik {
+            cursor: pointer;
+          }
+
+          span {
+            margin-left: 10px;
+          }
+
+          .pre-link {
+            font-size: 13px;
+            margin-right: 10px;
+          }
+
+          .pre-icon {
+            margin-top: -4px;
+          }
+
+          i {
+            font-size: 100% !important;
+            vertical-align: unset;
+          }
+
+          .fa-angle-down {
+            margin-left: auto;
+            margin-right: 10px;
+          }
+
+          .fa-angle-up {
+            margin-left: auto;
+            margin-right: 10px;
+          }
+        }
+
+        a:hover {
+          color: #132565 !important;
+          background-color: #f9f9f9;
+          border-radius: 30px;
+          -webkit-transition: background-color 0.5s ease-out;
+          -moz-transition: background-color 0.5s ease-out;
+          -o-transition: background-color 0.5s ease-out;
+          transition: background-color 0.5s ease-out;
+
+          img {
+            filter: invert(9%) sepia(55%) saturate(3019%) hue-rotate(220deg)
+              brightness(42%) contrast(86%);
+          }
+
+          .icon-color {
+            filter: brightness(0) saturate(100%) invert(10%) sepia(88%)
+              saturate(2433%) hue-rotate(220deg) brightness(85%) contrast(94%);
+          }
+        }
+
+        .sub-list-group {
+          padding-left: 0;
+          border-bottom: 1px solid #cbcee8 !important;
+        }
+      }
+    }
+  }
+}

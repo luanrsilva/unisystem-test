@@ -1,0 +1,98 @@
+<section class="sidebar" id="sidebar">
+  <div class="menu text-center">
+    <h1>Menu</h1>
+  </div>
+
+  <div class="side-menu-list pb-3">
+    <h4>Empresa</h4>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <dl class="pb-1" routerLinkActive="active">
+          <a class="nav-link p-1 pl-2" (click)="setOpenCloseCompany()">
+            <label class="father-lik">
+              <i class="fa fa-building"></i>
+              <span class="pre-link">Config. da Empresa</span>
+            </label>
+            <i [class]="getIconClass()"></i>
+          </a>
+        </dl>
+
+        <ul class="sub-list-group" *ngIf="openCloseCompany">
+          <li class="list-group-item">
+            <dl class="pb-1" routerLinkActive="active">
+              <a class="nav-link p-1 pl-2">
+                <span [translate]="'general.sidebar.forms'">Minha Empresa</span>
+              </a>
+            </dl>
+          </li>
+          <li class="list-group-item" [hidden]="!hasCompany()">
+            <dl class="pb-1" routerLinkActive="active">
+              <a class="nav-link p-1 pl-2">
+                <span [translate]="'general.sidebar.forms'">Benefícios</span>
+              </a>
+            </dl>
+          </li>
+          <li class="list-group-item" [hidden]="!hasCompany()">
+            <dl class="pb-1" routerLinkActive="active">
+              <a class="nav-link p-1 pl-2">
+                <span [translate]="'general.sidebar.forms'">Áreas</span>
+              </a>
+            </dl>
+          </li>
+          <li class="list-group-item" [hidden]="!hasCompany()">
+            <dl class="pb-1" routerLinkActive="active">
+              <a class="nav-link p-1 pl-2">
+                <span [translate]="'general.sidebar.forms'">Cargos</span>
+              </a>
+            </dl>
+          </li>
+          <li class="list-group-item" [hidden]="!hasCompany()">
+            <dl class="pb-1" routerLinkActive="active">
+              <a class="nav-link p-1 pl-2">
+                <span [translate]="'general.sidebar.forms'">Filiais</span>
+              </a>
+            </dl>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4 [hidden]="!hasCompany()">Vagas</h4>
+    <ul class="list-group">
+      <li class="list-group-item" [hidden]="!hasCompany()">
+        <dl class="pb-1" routerLinkActive="active">
+          <a class="nav-link p-1 pl-2" (click)="setOpenCloseCompany()">
+            <label class="father-lik">
+              <i class="fa fa-briefcase"></i>
+              <span class="pre-link">Gestão de Vagas</span>
+            </label>
+          </a>
+        </dl>
+      </li>
+    </ul>
+
+    <h4 [hidden]="!hasCompany()">Usuário</h4>
+    <ul class="list-group">
+      <li class="list-group-item" [hidden]="!hasCompany()">
+        <dl class="pb-1" routerLinkActive="active">
+          <a class="nav-link p-1 pl-2" (click)="setOpenCloseCompany()">
+            <label class="father-lik">
+              <i class="fa fa-user"></i>
+              <span class="pre-link">Meu perfil</span>
+            </label>
+          </a>
+        </dl>
+      </li>
+      <li class="list-group-item" [hidden]="!hasCompany()">
+        <dl class="pb-1" routerLinkActive="active">
+          <a class="nav-link p-1 pl-2" (click)="setOpenCloseCompany()">
+            <label class="father-lik">
+              <i class="fa fa-users"></i>
+              <span class="pre-link">Todos os usuários</span>
+            </label>
+          </a>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</section>

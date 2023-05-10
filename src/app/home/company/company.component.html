@@ -1,0 +1,45 @@
+<section class="company">
+  <h1>EMPRESA</h1>
+
+  <div class="card shadow row header-buttons">
+    <button class="btn btn-outline-primary col-lg-2">Editar empresa</button>
+    <button class="btn btn-outline-primary col-lg-2">Gestão de filiais</button>
+    <button class="btn btn-outline-primary col-lg-2">Faixas salariais</button>
+    <button class="btn btn-outline-primary col-lg-2">Job Level</button>
+  </div>
+
+  <div class="card shadow row infos">
+    <div class="form-group info-item col-lg-4">
+      <label for="">Nome da empresa</label>
+      <p>{{company?.companyName}}</p>
+    </div>
+    <div class="form-group info-item col-lg-4">
+      <label for="">CNPJ da empresa</label>
+      <p>{{company?.companyCNPJ}}</p>
+    </div>
+    <div class="form-group info-item col-lg-4">
+      <label for="">Nome do administrador</label>
+      <p>{{company?.companyAdm}}</p>
+    </div>
+    <div class="form-group info-item col-lg-4">
+      <label for="">CPF do administrador</label>
+      <p>{{company?.companyCPF}}</p>
+    </div>
+    <div class="form-group info-item col-lg-4">
+      <label for="">E-mail</label>
+      <p>{{company?.companyEmail}}</p>
+    </div>
+    <div class="form-group info-item col-lg-4">
+      <label for="">Telefone</label>
+      <p>{{company?.companyPhone}}</p>
+    </div>
+    <div class="form-group info-item col-lg-4">
+      <label for="">CEP</label>
+      <p>{{company?.companyCEP}}</p>
+    </div>
+    <div class="form-group info-item col-lg-4">
+      <label for="">Endereço</label>
+      <p>{{getAddress()}}</p>
+    </div>
+  </div>
+</section>
